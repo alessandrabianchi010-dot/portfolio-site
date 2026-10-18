@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandra Bianchi | Concept & 3D Artist</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Marmoset Viewer -->
+  <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
+
+</head>
+<body>
+
+  <!-- FIXED HEADER -->
+  <header>
+    <div class="logo">Alessandra <span>Bianchi</span></div>
+    <nav>
+      <ul>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>CONCEPT & 3D ARTIST</h1>
+    <p>Passionate about creating imaginary environments, detailed characters, and game assets with a strong storytelling focus.</p>
+    <a href="#projects" class="btn">Explore Works <i class="fa-solid fa-arrow-down"></i></a>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <h2 class="section-title">Portfolio Projects</h2>
+    
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="filterProjects('all', event)">All</button>
+      <button class="filter-btn" onclick="filterProjects('env', event)">Environment</button>
+      <button class="filter-btn" onclick="filterProjects('creature', event)">Creature Design</button>
+      <button class="filter-btn" onclick="filterProjects('character', event)">Character Design</button>
+      <button class="filter-btn" onclick="filterProjects('game', event)">Game & UI</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- MODAL DETAIL -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-meta">
+          <span id="modalCategory"></span> | 
+          <span id="modalSoftware"></span>
+        </div>
+      </div>
+      <p class="modal-desc" id="modalDescription"></p>
+      
+      <!-- Contenuto dinamico caricato dal file del singolo progetto -->
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about" style="background: #0c0c10;">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <div class="about-img">
+        <img src="media/me/profile.jpg" alt="Alessandra Bianchi">
+      </div>
+      <div class="about-text">
+        <h3>Hi, I'm Alessandra</h3>
+        <p>I have had a strong passion for art and videogames since I was a child. I am an energetic person with a great desire to acquire new skills, loving to draw and bring imaginary things to life for games.</p>
+        <p>With a degree in <strong>scenography</strong>, I am deeply passionate about creating imaginary environments, placing objects within spaces to tell a compelling story.</p>
+        <p style="margin-top: 15px;"><strong>Software & Skills:</strong> Maya, ZBrush, Unreal Engine 5, Substance Painter, Photoshop, 2D Concept Art, Hard Surface & Organic Sculpting, Retopology & UV Unwrapping.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-container">
+      <p style="color: var(--text-dim); margin-bottom: 25px;">Interested in collaborating or discussing game development opportunities? Reach out!</p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:alessandrabianchi010@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Send Email</a>
+        <a href="https://www.linkedin.com/in/alessandra-bianchi-11815337b/" target="_blank" class="btn"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="resume-container">
+      <a href="Alessandra_Bianchi_Resume.pdf" target="_blank" class="btn" style="font-size: 0.85rem;">
+        <i class="fa-solid fa-file-pdf"></i> Download Resume / CV
+      </a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.artstation.com/alessandra10" target="_blank" title="ArtStation"><i class="fa-brands fa-artstation"></i></a>
+      <a href="https://www.linkedin.com/in/alessandra-bianchi-11815337b/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:alessandrabianchi010@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <p style="color: var(--text-dim); font-size: 0.8rem;">© 2026 Alessandra Bianchi. All rights reserved.</p>
+  </footer>
+
+  <!-- Marmoset Web Viewer library (se usi direttamente Marmoset Web) -->
+  <script src="https://marmoset.co/js/marmoset.js"></script>
+
+  <!-- CARICAMENTO SCRIPT PROGETTI -->
+  <script src="js/projects/temple.js"></script>
+  <script src="js/projects/creature.js"></script>
+  <script src="js/projects/skullpanda.js"></script>
+
+  <!-- SCRIPT GENERALE SPA -->
+  <script src="js/main.js"></script>
+</body>
+</html>
