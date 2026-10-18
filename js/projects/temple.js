@@ -6,22 +6,65 @@ window.projectsData.push({
   category: "env",
   categoryLabel: "Environment Design",
   software: "Maya, Unreal Engine 5.6, Ultra Dynamic Sky",
-  coverImage: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800",
-  description: "A personal project developing a realistic beauty corner within an abandoned temple setting. Focused on water shader materials blending with terrain, volumetric fog catching light rays, blockout in Maya, camera positioning, and lighting in Unreal Engine 5.6.",
-  mviewFile: "media/SkullPanda/tbexport.mview", // Percorso al file .mview se presente
-  renderContent: function() {
-    return `
-      <div class="project-layout-temple">
-        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200" alt="Temple Render">
-        
-        <h3>Water Shader Breakdown</h3>
-        <p>The water material blends seamlessly with the terrain texture while producing strong light reflections and volumetric fog effects.</p>
-        
-        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200" alt="Lighting Breakdown">
-        
-        <h3>Interactive 3D Model</h3>
-        <div id="marmoset-viewer-box" style="width: 100%; height: 500px; background: #000; border-radius: 8px;"></div>
-      </div>
-    `;
-  }
+  coverImage: "media/enviroments/temple/HighresScreenshot00000 copia.webp",
+  description: "A personal project developing a realistic beauty corner within an abandoned temple setting, focusing on water shaders, volumetric fog, and lighting in Unreal Engine 5.6.",
+  
+  // COSTRUISCI LA PAGINA COME UN PUZZLE:
+  contentBlocks: [
+    {
+      type: "text",
+      tag: "h3",
+      content: "Project Overview",
+      align: "left"
+    },
+    {
+      type: "text",
+      content: "For this personal project, I developed a small beauty corner within a realistic setting, focusing on water shader development and lighting using <b>Ultra Dynamic Sky</b> in Unreal Engine 5.6. I started by researching references to select the architecture for the scene, followed by a blockout in Maya and initial camera/lighting tests in UE5.",
+      align: "left"
+    },
+    {
+      type: "image",
+      url: "media/enviroments/temple/HighresScreenshot00000 copia.webp",
+      caption: "Final beauty shot showcasing the temple atmosphere and lighting composition.",
+      width: "100%",
+      align: "center"
+    },
+    {
+      type: "text",
+      tag: "h3",
+      content: "Water Shader & Volumetric Atmosphere",
+      align: "left"
+    },
+    {
+      type: "text",
+      content: "For the water material, I aimed to create a realistic shader that would blend seamlessly with the terrain texture while producing strong light reflections. By incorporating custom volumetric fog, I achieved the effect of gentle mist rising from the pond and catching the incoming rays of light.",
+      align: "left"
+    },
+    {
+      type: "image",
+      url: "media/enviroments/temple/water.webp",
+      caption: "Close-up view focusing on water shader blending and light scattering.",
+      width: "90%",
+      align: "center"
+    },
+    {
+      type: "text",
+      tag: "h3",
+      content: "Technical Breakdown & Visualizations",
+      align: "left"
+    },
+    {
+      type: "text",
+      content: "Analysis of light complexity and world normal maps to ensure optimal game performance.",
+      align: "left",
+      italic: true
+    },
+    {
+      type: "image-grid",
+      images: [
+        "media/enviroments/temple/HighresScreenshot00008.webp",
+        "media/enviroments/temple/HighresScreenshot00009.webp"
+      ]
+    }
+  ]
 });

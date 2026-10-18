@@ -53,10 +53,26 @@ nav a:hover { color: var(--accent-color); }
 .filter-btn.active, .filter-btn:hover { color: #fff; border-color: var(--accent-color); background: rgba(181, 23, 158, 0.2); }
 
 /* PROJECTS GRID */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+.projects-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .project-card {
-    background: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, border-color 0.3s ease; cursor: pointer; position: relative;
+    background: var(--card-bg); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+    cursor: pointer; 
+    position: relative;
+    /* Impostazioni per la larghezza flessibile ma centrata */
+    width: 350px;
+    flex: 1 1 320px;
+    max-width: 380px;
 }
 .project-card:hover { transform: translateY(-6px); border-color: var(--accent-color); }
 .project-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
