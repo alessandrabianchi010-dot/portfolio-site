@@ -43,7 +43,7 @@ Prima di iniziare, ecco una panoramica di come è organizzato il tuo computer:
 
 Per aggiungere un nuovo lavoro:
 
-1. **Crea una cartella per i file multimediali:** Entra nella cartella `media/` e crea una nuova cartella con il nome del progetto (es. `media/nome-progetto/`). Al suo interno inserisci la foto di copertina e le immagini di dettaglio.
+1. **Crea una cartella per i file multimediali:** Entra nella cartella `media/` e crea una nuova cartella con il nome del progetto (es. `media/Categoria/nome-progetto/`). Al suo interno inserisci la foto di copertina e le immagini di dettaglio.
 2. **Crea il file JavaScript del progetto:** Entra nella cartella `js/projects/`, crea un nuovo file di testo e chiamalo con il nome del progetto in minuscolo (es. `nome-progetto.js`).
 3. **Collega il file al sito:** Apri il file **`index.html`** con un editor di testo, scorri fino in fondo (subito prima di `main.js`) e aggiungi la riga per richiamare il tuo nuovo file:
 ```html
@@ -99,7 +99,8 @@ Nella proprietà `category` puoi inserire **solo una** di queste parole chiave e
 * `"env"` → Per Environment Design
 * `"creature"` → Per Creature Design
 * `"character"` → Per Character Design
-* `"game"` → Per Game & UI
+* `"game"` → Per Character Design
+* `"B2B"` → Per Game Bluvacanze
 
 ---
 
