@@ -1,9 +1,9 @@
 window.projectsData = window.projectsData || [];
 
 window.projectsData.push({
-  id: 1,
+  id: 3,
   title: "Ancient Abandoned Temple",
-  category: "env",
+  category: "env", // SCEGLI FRA  " env, creature, character,  game, B2B, jam " 
   categoryLabel: "Environment Design",
   software: "Maya, Unreal Engine 5.6, Ultra Dynamic Sky",
   coverImage: "media/enviroments/temple/HighresScreenshot00000 copia.webp",
